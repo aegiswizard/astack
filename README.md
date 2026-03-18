@@ -35,11 +35,11 @@
 
 ### Where this came from
 
-The AI coding assistant space exploded in 2024–2025. Tools like Claude Code, GitHub Copilot, Cursor, and Aider made it possible for a single developer to move at speeds that were previously impossible. But the tools had a problem: they were generic.
+The AI coding assistant space exploded in 2026. Tools like Claude Code, GitHub Copilot, Cursor, and Aider made it possible for a single developer to move at speeds that were previously impossible. But the tools had a problem: they were generic.
 
 A generic AI assistant is like a brilliant new hire who has read every programming book ever written but has no idea what role they're supposed to be playing right now. Are they a product manager? A senior engineer? A QA tester? A release coordinator? Without explicit direction, they default to doing exactly what was asked — literally, conservatively, and without context.
 
-In 2025, Garry Tan — President & CEO of Y Combinator — published **gstack**, an opinionated set of Claude Code slash commands that addressed this directly. The idea was right: give the AI explicit cognitive modes. Tell it what kind of thinking to do right now. Plan differently from how you review. Review differently from how you ship.
+In 2026, Garry Tan — President & CEO of Y Combinator — published **gstack**, an opinionated set of Claude Code slash commands that addressed this directly. The idea was right: give the AI explicit cognitive modes. Tell it what kind of thinking to do right now. Plan differently from how you review. Review differently from how you ship.
 
 gstack was valuable. It proved the concept worked. But it had limitations:
 
