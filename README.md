@@ -424,7 +424,7 @@ If `CLAUDE.md` already exists: preserves intentional hand-written notes, marks s
 
 Every Astack skill is a single `.md` file. No templates, no codegen, no build step. This is intentional.
 
-Skill files are read by the AI model on every invocation. Every token in a skill file is a token that must fit in the context window and costs inference compute. On a Raspberry Pi 3 running a 600M parameter model, a skill file that is 3,000 tokens instead of 300 tokens is the difference between a task completing and running out of context.
+Skill files are read by the AI model on every invocation. Every token in a skill file is a token that must fit in the context window and costs inference compute. On a Raspberry Pi 5 running a 600M parameter model, a skill file that is 3,000 tokens instead of 300 tokens is the difference between a task completing and running out of context.
 
 This constraint also enforces discipline: if you can't say what the skill should do in a page of Markdown, you don't understand what it should do.
 
