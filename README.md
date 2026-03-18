@@ -194,7 +194,7 @@ Each skill is registered in OpenClaw's agent config. The agent knows which skill
 When a skill is invoked, its SKILL.md is injected into the active model's context window. The agent operates under those instructions for the duration of the task.
 
 **Phase 4 — State persistence**
-`.xstack/` output (plans, reviews, QA reports, retros) is readable by the agent across sessions. Past decisions inform future work.
+`.astack/` output (plans, reviews, QA reports, retros) is readable by the agent across sessions. Past decisions inform future work.
 
 **Phase 5 — Cross-skill orchestration**
 The agent can chain skills automatically. A `/ship` invocation checks review status, runs `/qa` if needed, and proceeds only when gates are cleared — without user intervention.
@@ -265,7 +265,7 @@ The structured workflow — plan → implement → review → qa → ship — is
 |---|---|
 | **`/fix [description]`** | A disciplined, non-wandering bug mode. Reproduce → isolate → hypothesize → fix → verify → regression test. Does not refactor, does not add features, does not wander. This was the most obvious missing skill. |
 | **`/context`** | Reads your codebase and writes or refreshes CLAUDE.md. Critical for onboarding new projects, keeping context current, and making the AI useful on repos it hasn't seen before. |
-| **`.xstack/config.json`** | Universal portability config. `test_command`, `dev_server`, `greptile`, `skip_eng_review`. The tool adapts to your setup instead of requiring your setup to adapt to the tool. |
+| **`.astack/config.json`** | Universal portability config. `test_command`, `dev_server`, `greptile`, `skip_eng_review`. The tool adapts to your setup instead of requiring your setup to adapt to the tool. |
 | **Stack auto-detection in `/ship`** | Detects: bun → npm → yarn → pytest → go test → cargo test → mix test → bundle exec rspec. Works with any language. The first thing every non-Rails user had to patch in gstack. |
 | **Structured review output with blocking semantics** | CRITICAL → HIGH → MEDIUM → INFO. CRITICAL findings block `/ship`. Everything else is advisory. Review results are deterministic and actionable, not free-form commentary. |
 | **`/plan` saves decisions to `.xstack/plans/`** | Plans survive beyond the conversation window. The agent can reference past decisions in future sessions. |
@@ -441,7 +441,7 @@ On OpenClaw, the browser daemon lifecycle is managed by the agent framework rath
 All persistent state goes to `.xstack/` in your project root:
 
 ```
-.xstack/
+.astack/
   config.json           # project configuration
   plans/                # /plan output — product and arch documents
   qa-reports/           # /qa output — reports and screenshots
@@ -588,7 +588,7 @@ cd astack
 ### v1.0 — Foundation (current)
 - [x] Nine core skills: plan, review, fix, ship, browse, qa, sync-cookies, retro, context
 - [x] Stack auto-detection in /ship (8 runtimes)
-- [x] `.xstack/config.json` configuration system
+- [x] `.astack/config.json` configuration system
 - [x] Model-agnostic Markdown skill files
 - [x] Structured output formats (CRITICAL/HIGH/MEDIUM/INFO)
 - [x] Persistent state in `.xstack/`
