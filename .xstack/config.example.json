@@ -1,0 +1,15 @@
+{
+  "test_command": null,
+  "dev_server": null,
+  "skip_eng_review": false,
+  "greptile": false,
+  "model_preference": {
+    "plan": "cloud",
+    "review": "cloud",
+    "fix": "local",
+    "ship": "local",
+    "qa": "local",
+    "retro": "local",
+    "context": "local"
+  }
+}

@@ -1,0 +1,11 @@
+node_modules/
+bin/browser-daemon
+.browser-state/
+.xstack/plans/
+.xstack/qa-reports/
+.xstack/retros/
+.xstack/review-status.json
+.xstack/browser.log
+.xstack/config.json
+*.log
+.DS_Store

@@ -1,0 +1,17 @@
+{
+  "name": "astack",
+  "version": "1.0.0",
+  "description": "Universal AI development workflow stack",
+  "type": "module",
+  "scripts": {
+    "build": "bun build bin/browser-daemon.ts --compile --outfile bin/browser-daemon",
+    "dev": "bun run bin/browser-daemon.ts",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "playwright": "^1.48.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0"
+  }
+}
